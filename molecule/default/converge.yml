@@ -1,0 +1,10 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  vars:
+    remote_logs_server: example.com
+  tasks:
+    - name: Include role
+      include_role:
+        name: vladgh.logs
