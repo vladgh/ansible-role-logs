@@ -23,12 +23,13 @@
     - Update trusted CA certificates
 
 - name: Ensure RSysLog Packages
-  package:
-    name: "{{ item }}"
+  apt:
+    name:
+      - rsyslog
+      - rsyslog-gnutls
+    update_cache: yes
+    cache_valid_time: 86400
     state: present
-  with_items:
-    - rsyslog
-    - rsyslog-gnutls
 
 - name: Configure RSysLog
   template:
