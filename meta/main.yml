@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: logs
-  author: Vlad Ghinea
+  author: vladgh
   description: Vlad's Logs Role
   license: Apache v2
   min_ansible_version: 2.4
